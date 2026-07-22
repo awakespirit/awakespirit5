@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awake Spirit | Connect with Sanjay</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            /* Hokkaido को शान्तिको झलक दिने उज्यालो ब्याकग्राउन्ड */
+            background: linear-gradient(rgba(255, 252, 240, 0.7), rgba(255, 252, 240, 0.7)),
+                        url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        .container { text-align: center; padding: 20px; width: 100%; max-width: 500px; }
+
+        /* आकर्षक गोल्डेन बक्स - तपाईँको आइडिया */
+        .awake-box {
+            background: linear-gradient(135deg, #ffd700, #daa520);
+            color: white;
+            padding: 30px 20px;
+            font-size: 30px;
+            font-weight: 800;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 15px 35px rgba(218, 165, 32, 0.4);
+            border: 4px solid #fff;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            display: inline-block;
+            width: 100%;
+        }
+
+        .awake-box:hover { transform: scale(1.05); }
+
+        /* सोसल मिडिया लिङ्कहरू - सुरुमा लुकेको */
+        .social-container {
+            display: none;
+            margin-top: 30px;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            animation: slideUp 0.5s ease-out forwards;
+        }
+
+        .social-btn {
+            padding: 15px;
+            border-radius: 15px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .youtube { background: #FF0000; }
+        .tiktok { background: #000000; }
+        .facebook { background: #1877F2; }
+        .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Main Box -->
+        <div class="awake-box" onclick="toggleSocial()">
+            AWAKE SPIRIT
+        </div>
+
+        <p style="margin-top: 15px; color: #777;">Tap to connect</p>
+
+        <!-- Social Icons -->
+        <div class="social-container" id="socialBox">
+            <a href="https://www.youtube.com/@AwakeSpirit-Sanjay" class="social-btn youtube" target="_blank">YouTube</a>
+            <a href="#" class="social-btn tiktok" target="_blank">TikTok</a>
+            <a href="#" class="social-btn facebook" target="_blank">Facebook</a>
+            <a href="#" class="social-btn instagram" target="_blank">Instagram</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleSocial() {
+            var x = document.getElementById("socialBox");
+            if (x.style.display === "grid") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "grid";
+            }
+        }
+    </script>
+
+</body>
+</html>
