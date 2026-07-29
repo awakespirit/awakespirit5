@@ -1,4 +1,5 @@
-TYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,117 +9,22 @@ TYPE html>
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            /* Hokkaido को शान्तिको झलक दिने उज्यालो ब्याकग्राउन्ड */
             background: linear-gradient(rgba(255, 252, 240, 0.7), rgba(255, 252, 240, 0.7)),
                         url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             min-height: 100vh;
             font-family: 'Segoe UI', Arial, sans-serif;
+            padding: 20px 0;
         }
-.about-section {
-  padding: 50px 20px;
-  background-color: #f8f9fa;
-  font-family: Arial, sans-serif;
-  color: #333;
-}
 
-.container {
-  max-width: 850px;
-  margin: 0 auto;
-}
+        .hero-container { text-align: center; padding: 20px; width: 100%; max-width: 500px; }
 
-.section-title {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.section-title h2 {
-  font-size: 32px;
-  color: #1a1a1a;
-  margin-bottom: 8px;
-}
-
-.about-content, .mission-box {
-  background: #ffffff;
-  padding: 25px 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  margin-bottom: 25px;
-}
-
-.about-content h3, .mission-box h3, .founders-section h3 {
-  color: #2c3e50;
-  margin-bottom: 12px;
-  font-size: 22px;
-  border-bottom: 2px solid #eee;
-  padding-bottom: 8px;
-}
-
-.mission-box {
-  border-left: 5px solid #8e44ad; /* दार्शनिक/आध्यात्मिक थीमका लागि बैजनी रङ */
-}
-
-.mission-box .subtitle {
-  color: #8e44ad;
-  font-weight: bold;
-  margin-bottom: 10px;
-  font-size: 16px;
-}
-
-.founders-section {
-  margin-top: 40px;
-}
-
-.founders-grid {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.founder-card {
-  background: #ffffff;
-  padding: 25px;
-  border-radius: 8px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  width: 260px;
-}
-
-.founder-avatar {
-  width: 70px;
-  height: 70px;
-  background-color: #8e44ad;
-  color: white;
-  font-size: 30px;
-  font-weight: bold;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 15px auto;
-}
-
-.founder-card h4 {
-  margin: 5px 0;
-  font-size: 18px;
-  color: #2c3e50;
-}
-
-.founder-card span {
-  font-size: 13px;
-  color: #7f8c8d;
-  display: block;
-  margin-bottom: 10px;
-}
-        .container { text-align: center; padding: 20px; width: 100%; max-width: 500px; }
-
-        /* आकर्षक गोल्डेन बक्स - तपाईँको आइडिया */
+        /* Golden Box */
         .awake-box {
             background: linear-gradient(135deg, #ffd700, #daa520);
             color: white;
@@ -137,7 +43,7 @@ TYPE html>
 
         .awake-box:hover { transform: scale(1.05); }
 
-        /* सोसल मिडिया लिङ्कहरू - सुरुमा लुकेको */
+        /* Social Media Buttons */
         .social-container {
             display: none;
             margin-top: 30px;
@@ -164,68 +70,147 @@ TYPE html>
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* About Section Design */
+        .about-section {
+            padding: 40px 20px;
+            width: 100%;
+            max-width: 850px;
+            margin-top: 20px;
+        }
+
+        .about-content, .mission-box {
+            background: rgba(255, 255, 255, 0.92);
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+        }
+
+        .about-content h3, .mission-box h3, .founders-section h3 {
+            color: #2c3e50;
+            margin-bottom: 12px;
+            font-size: 22px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+        }
+
+        .nepali-text {
+            color: #555;
+            font-size: 0.95rem;
+            margin-top: 8px;
+            line-height: 1.5;
+        }
+
+        .mission-box {
+            border-left: 5px solid #8e44ad;
+        }
+
+        .mission-box .subtitle {
+            color: #8e44ad;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .founders-section {
+            margin-top: 30px;
+        }
+
+        .founders-grid {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .founder-card {
+            background: rgba(255, 255, 255, 0.92);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            width: 280px;
+        }
+
+        .founder-avatar {
+            width: 70px;
+            height: 70px;
+            background-color: #8e44ad;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px auto;
+        }
+
+        .founder-card h4 {
+            margin: 5px 0;
+            font-size: 18px;
+            color: #2c3e50;
+        }
+
+        .founder-card span {
+            font-size: 13px;
+            color: #7f8c8d;
+            display: block;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
-   <section class="about-section" id="about">
-  <div class="container">
-    
-    <!-- Section Header -->
-    <div class="section-title">
-      <h2>About Awake Spirit</h2>
-      <p>हाम्रो परिचय, उद्देश्य र दर्शन</p>
-    </div>
-
-    <!-- 1. About Me -->
-    <div class="about-content">
-      <h3>About Me</h3>
-      <p>
-        नमस्कार! म सञ्जय। प्रेरणादायी र दार्शनिक विचारहरू प्रस्तुत गर्दै मानिसहरूलाई आन्तरिक रूपमा सशक्त बनाउने उद्देश्यका साथ म यो क्षेत्रमा सक्रिय छु। 'Awake Spirit' मार्फत जीवनका विविध आयाम, दार्शनिक ज्ञान र सकारात्मक सोचलाई सहज रूपमा प्रस्तुत गर्ने मेरो प्रयास रहेको छ।
-      </p>
-    </div>
-
-    <!-- 2. My Mission (Topic: One Truth, Many Paths) -->
-    <div class="mission-box">
-      <h3>My Mission: One Truth, Many Paths</h3>
-      <p class="subtitle"><em>"एउटै सत्य, अनेक मार्ग"</em></p>
-      <p>
-        हाम्रो मुख्य उद्देश्य प्रत्येक व्यक्तिलाई आन्तरिक शान्ति, सत्य र स्व-जागरण (Self-realization) तर्फ डोर्‍याउनु हो। बाटो वा दृष्टिकोण फरक हुन सक्छन्, तर लक्ष्य एउटै हो—परम सत्य र सकारात्मकता। मानिसहरूलाई आ-आफ्नो मार्गबाट सत्य र ज्ञान खोज्न प्रेरित गर्नु नै 'Awake Spirit' को मूल ध्येय हो।
-      </p>
-    </div>
-
-    <!-- 3. Founders Section -->
-    <div class="founders-section">
-      <h3>Founders</h3>
-      <div class="founders-grid">
-        
-        <!-- Founder Card -->
-        <div class="founder-card">
-          <div class="founder-avatar">S</div>
-          <h4>Sanjay</h4>
-          <span>Founder & Content Creator</span>
-          <p>Awake Spirit का संस्थापक तथा मुख्य विषयवस्तु (Content) निर्माता।</p>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section> 
 <body>
 
-    <div class="container">
-        <!-- Main Box -->
+    <!-- Hero / Social Section -->
+    <div class="hero-container">
         <div class="awake-box" onclick="toggleSocial()">
             AWAKE SPIRIT
         </div>
 
-        <p style="margin-top: 15px; color: #777;">Tap to connect</p>
+        <p style="margin-top: 15px; color: #555; font-weight: 600;">Tap to connect</p>
 
-        <!-- Social Icons -->
         <div class="social-container" id="socialBox">
-         <a href="https://youtube.com/@awakeSpirits5" class="social-btn youtube" target="_blank">YouTube</a>
-<a href="https://tiktok.com/@awakespirit1" class="social-btn tiktok" target="_blank">TikTok</a>
-<a href="https://facebook.com/sunjoygirri" class="social-btn facebook" target="_blank">Facebook</a>
-<a href="https://instagram.com/yourusername" class="social-btn instagram" target="_blank">Instagram</a>
+            <a href="https://youtube.com/@awakeSpirits5" class="social-btn youtube" target="_blank">YouTube</a>
+            <a href="https://tiktok.com/@awakespirit1" class="social-btn tiktok" target="_blank">TikTok</a>
+            <a href="https://facebook.com/sunjoygirri" class="social-btn facebook" target="_blank">Facebook</a>
+            <a href="https://instagram.com/yourusername" class="social-btn instagram" target="_blank">Instagram</a>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <!-- 1. About Me -->
+        <div class="about-content">
+            <h3>About Me</h3>
+            <p><strong>Welcome! I am Sanjay.</strong> I am dedicated to inspiring and empowering individuals through motivational insights, philosophical reflections, and positive thinking. Through 'Awake Spirit', my aim is to simplify life's profound wisdom and help people connect with their inner strength.</p>
+            
+            <p class="nepali-text"><em>(नमस्कार! म सञ्जय। प्रेरणादायी र दार्शनिक विचारहरू प्रस्तुत गर्दै मानिसहरूलाई आन्तरिक रूपमा सशक्त बनाउने उद्देश्यका साथ म यो क्षेत्रमा सक्रिय छु। 'Awake Spirit' मार्फत जीवनका विविध आयाम र सकारात्मक सोचलाई सहज रूपमा प्रस्तुत गर्ने मेरो प्रयास रहेको छ।)</em></p>
+        </div>
+
+        <!-- 2. My Mission -->
+        <div class="mission-box">
+            <h3>Our Mission: One Truth, Many Paths</h3>
+            <p class="subtitle">"One Truth, Many Paths" — <em>एउटै सत्य, अनेक मार्ग</em></p>
+            <p>Our core purpose is to guide every individual toward inner peace, truth, and self-realization. While perspectives and paths may differ, the ultimate destination remains one—truth and positivity. 'Awake Spirit' strives to encourage everyone to discover truth along their own unique path.</p>
+            
+            <p class="nepali-text"><em>(हाम्रो मुख्य उद्देश्य प्रत्येक व्यक्तिलाई आन्तरिक शान्ति, सत्य र स्व-जागरण तर्फ डोर्‍याउनु हो। बाटो वा दृष्टिकोण फरक हुन सक्छन्, तर लक्ष्य एउटै हो—परम सत्य र सकारात्मकता।)</em></p>
+        </div>
+
+        <!-- 3. Founders Section -->
+        <div class="founders-section">
+            <div class="founders-grid">
+                <div class="founder-card">
+                    <div class="founder-avatar">S</div>
+                    <h4>Sanjay</h4>
+                    <span>Founder & Content Creator</span>
+                    <p>Founder and primary content creator behind Awake Spirit.</p>
+                    <p class="nepali-text"><em>(Awake Spirit का संस्थापक तथा मुख्य विषयवस्तु निर्माता।)</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script>
         function toggleSocial() {
