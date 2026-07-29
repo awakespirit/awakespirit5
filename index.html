@@ -4,17 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awake Spirit | Connect with Sanjay</title>
+    <title>Awake Spirit</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-            /* Hokkaido को शान्त वातावरण दिने ब्याकग्राउन्ड */
-            background: linear-gradient(rgba(255, 252, 240, 0.75), rgba(255, 252, 240, 0.75)),
-                        url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background-color: #fdfbf7;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -25,42 +20,38 @@
 
         .hero-container { text-align: center; padding: 15px; width: 100%; max-width: 500px; }
 
-        /* गोल्डेन AWAKE SPIRIT बक्स */
+        /* AWAKE SPIRIT Button */
         .awake-box {
             background: linear-gradient(135deg, #ffd700, #daa520);
             color: white;
-            padding: 25px 20px;
-            font-size: 28px;
-            font-weight: 800;
-            border-radius: 25px;
+            padding: 20px;
+            font-size: 26px;
+            font-weight: bold;
+            border-radius: 20px;
             cursor: pointer;
-            box-shadow: 0 15px 35px rgba(218, 165, 32, 0.4);
-            border: 4px solid #fff;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 25px rgba(218, 165, 32, 0.4);
+            border: 3px solid #fff;
+            transition: transform 0.3s ease;
             display: inline-block;
             width: 100%;
-            letter-spacing: 1px;
         }
 
-        .awake-box:hover { transform: scale(1.03); }
+        .awake-box:hover { transform: scale(1.02); }
 
-        /* सोसल मिडिया बटनहरू */
+        /* Social Container */
         .social-container {
             display: none;
-            margin-top: 25px;
+            margin-top: 20px;
             grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            animation: slideUp 0.5s ease-out forwards;
+            gap: 12px;
         }
 
         .social-btn {
-            padding: 14px;
-            border-radius: 12px;
+            padding: 12px;
+            border-radius: 10px;
             text-decoration: none;
             color: white;
             font-weight: bold;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .youtube { background: #FF0000; }
@@ -68,108 +59,65 @@
         .facebook { background: #1877F2; }
         .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
 
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* मुख्य कार्ड र फोटो ब्यानर */
+        /* Card Layout */
         .main-card {
-            background: rgba(255, 255, 255, 0.95);
+            background: #ffffff;
             width: 100%;
-            max-width: 800px;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            max-width: 600px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             overflow: hidden;
-            margin-top: 25px;
-            border: 1px solid rgba(218, 165, 32, 0.3);
+            margin-top: 20px;
+            border: 1px solid #eee;
         }
 
-        /* कृष्ण र तपाईंको फोटो ब्यानर Styling */
-        .banner-box {
-            width: 100%;
-            border-bottom: 4px solid #ffd700;
-        }
-
-        .banner-box img {
+        /* Banner Photo Styling */
+        .banner-photo {
             width: 100%;
             height: auto;
             display: block;
+            border-bottom: 3px solid #ffd700;
         }
 
-        /* विवरण सेक्सन */
-        .content-section {
-            padding: 30px;
+        .content-area {
+            padding: 25px;
         }
 
-        .about-block, .mission-block {
-            margin-bottom: 25px;
-        }
-
-        .content-section h3 {
+        h3 {
             color: #2c3e50;
-            font-size: 22px;
             margin-bottom: 10px;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 6px;
+            font-size: 20px;
         }
 
-        .nepali-sub {
+        p {
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .nepali-text {
             color: #666;
             font-style: italic;
             font-size: 0.95rem;
-            margin-top: 6px;
-            line-height: 1.5;
         }
 
-        .mission-block {
+        .mission-box {
             border-left: 4px solid #8e44ad;
-            padding-left: 15px;
-            background: rgba(142, 68, 173, 0.03);
-            padding: 15px;
-            border-radius: 0 10px 10px 0;
-        }
-
-        .motto {
-            color: #8e44ad;
-            font-weight: bold;
-            font-size: 1.05rem;
-            margin-bottom: 8px;
-        }
-
-        .founder-info {
-            display: flex;
-            align-items: center;
-            gap: 15px;
+            padding-left: 12px;
             margin-top: 20px;
-            padding-top: 15px;
-            border-top: 1px dashed #ddd;
-        }
-
-        .avatar {
-            width: 55px;
-            height: 55px;
-            background-color: #8e44ad;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
+            background: #faf5ff;
+            padding: 12px;
+            border-radius: 0 8px 8px 0;
         }
     </style>
 </head>
 <body>
 
-    <!-- Hero / Social Toggle Header -->
+    <!-- Header Toggle Section -->
     <div class="hero-container">
         <div class="awake-box" onclick="toggleSocial()">
             AWAKE SPIRIT
         </div>
-
-        <p style="margin-top: 12px; color: #555; font-weight: 600;">Tap to connect</p>
 
         <div class="social-container" id="socialBox">
             <a href="https://youtube.com/@awakeSpirits5" class="social-btn youtube" target="_blank">YouTube</a>
@@ -179,41 +127,27 @@
         </div>
     </div>
 
-    <!-- Main Content Card with Photo Banner -->
+    <!-- Main Content Card -->
     <div class="main-card">
         
-        <!-- Krishna & Sanjay Banner Photo -->
-        <div class="banner-box">
-            <img src="krishna-banner.jpg" alt="Awake Spirit - Tatwa Darshi">
-        </div>
+        <!-- तपाईंको फोटो -->
+        <img src="krishna-banner.jpg" alt="Sanjay Girri - Awake Spirit" class="banner-photo">
 
-        <div class="content-section">
-            
+        <div class="content-area">
             <!-- About Me -->
-            <div class="about-block">
-                <h3>About Me / मेरो बारेमा</h3>
-                <p><strong>Welcome! I am Sanjay Girri.</strong> Inspired by the teachings of Krishna and deep philosophical wisdom, I am dedicated to exploring life's profound truths and empowering others on their spiritual journey through Awake Spirit.</p>
-                <p class="nepali-sub">(नमस्कार! म सञ्जय गिरी। कृष्णका उपदेश र दार्शनिक ज्ञानबाट प्रेरित भई, जीवनका गहरा सत्यहरू बुझ्न र अरूलाई आत्म-जागरूकतातर्फ डोर्‍याउन समर्पित छु।)</p>
-            </div>
+            <h3>About Me / मेरो बारेमा</h3>
+            <p><strong>Welcome! I am Sanjay Girri.</strong> Inspired by the teachings of Krishna and deep philosophical wisdom, I am dedicated to exploring life's profound truths and empowering others on their spiritual journey through Awake Spirit.</p>
+            <p class="nepali-text">(नमस्कार! म सञ्जय गिरी। कृष्णका उपदेश र दार्शनिक ज्ञानबाट प्रेरित भई, जीवनका गहरा सत्यहरू बुझ्न र अरूलाई आत्म-जागरूकतातर्फ डोर्‍याउन समर्पित छु।)</p>
 
             <!-- Mission -->
-            <div class="mission-block">
+            <div class="mission-box">
                 <h3>Our Mission / हाम्रो ध्येय</h3>
-                <p class="motto">"One Truth, Many Paths" — <em>एउटै सत्य, अनेक मार्ग</em></p>
-                <p>Awake Spirit aims to guide individuals toward self-realization, inner peace, and a purposeful life, simplifying complex spiritual concepts into daily inspiration.</p>
-                <p class="nepali-sub">(अवेक स्पिरिटले जटिल आध्यात्मिक अवधारणाहरूलाई सरल बनाई मानिसहरूलाई आत्म-साक्षात्कार र आन्तरिक शान्तिर्फ लैजाने लक्ष्य राखेको छ।)</p>
+                <p style="color: #8e44ad; font-weight: bold;">"One Truth, Many Paths" — <em>एउटै सत्य, अनेक मार्ग</em></p>
+                <p>Awake Spirit aims to guide individuals toward self-realization and a purposeful life.</p>
+                <p class="nepali-text">(अवेक स्पिरिटले मानिसहरूलाई आत्म-साक्षात्कार र आन्तरिक शान्तिर्फ लैजाने लक्ष्य राखेको छ।)</p>
             </div>
-
-            <!-- Founder Detail -->
-            <div class="founder-info">
-                <div class="avatar">S</div>
-                <div>
-                    <h4 style="color: #2c3e50;">Sanjay Girri</h4>
-                    <p style="font-size: 0.85rem; color: #7f8c8d;">Founder & Creator | Awake Spirit</p>
-                </div>
-            </div>
-
         </div>
+
     </div>
 
     <script>
