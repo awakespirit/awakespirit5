@@ -125,45 +125,42 @@
 
         .founder-card {
             background: rgba(255, 255, 255, 0.92);
-            padding: 25px;
+            padding: 30px 25px;
             border-radius: 12px;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            width: 300px;
-            border: 1px solid rgba(218, 165, 32, 0.3);
+            width: 320px;
+            border: 2px solid #ffd700;
         }
 
-        /* Goole Frame inside Founder Avatar */
-        .founder-avatar {
-            width: 95px;
-            height: 95px;
+        /* Clean Name Badge without photo */
+        .founder-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, #ffd700, #daa520);
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
             border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin: 0 auto 15px auto;
-            border: 3px solid #ffd700;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            overflow: hidden;
-            background-color: #ffd700;
-        }
-
-        .founder-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
+            box-shadow: 0 4px 10px rgba(218, 165, 32, 0.3);
         }
 
         .founder-card h4 {
             margin: 5px 0;
-            font-size: 20px;
+            font-size: 22px;
             color: #2c3e50;
         }
 
         .founder-card span {
-            font-size: 13px;
+            font-size: 14px;
             color: #8e44ad;
             font-weight: bold;
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
     </style>
 </head>
@@ -204,13 +201,11 @@
             <p class="nepali-text"><em>(हाम्रो मुख्य उद्देश्य प्रत्येक व्यक्तिलाई आन्तरिक शान्ति, सत्य र स्व-जागरण तर्फ डोर्‍याउनु हो। बाटो वा दृष्टिकोण फरक हुन सक्छन्, तर लक्ष्य एउटै हो—परम सत्य र सकारात्मकता।)</em></p>
         </div>
 
-        <!-- 3. Founders Section -->
+        <!-- 3. Founders Section (Clean Text-Only Layout) -->
         <div class="founders-section">
             <div class="founders-grid">
                 <div class="founder-card">
-                    <div class="founder-avatar">
-                        <img src="krishna-banner.jpg" alt="Sanjay Giri - Awake Spirit">
-                    </div>
+                    <div class="founder-icon">S</div>
                     <h4>Sanjay Giri</h4>
                     <span>Founder & Content Creator</span>
                     <p>Founder and primary content creator behind Awake Spirit.</p>
