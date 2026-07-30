@@ -133,20 +133,23 @@
             border: 2px solid #ffd700;
         }
 
-        /* Clean Name Badge without photo */
-        .founder-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, #ffd700, #daa520);
-            color: white;
-            font-size: 32px;
-            font-weight: bold;
+        /* गोल्डेन घेराभित्र फोटो राख्ने डिजाइन */
+        .founder-avatar {
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             margin: 0 auto 15px auto;
-            box-shadow: 0 4px 10px rgba(218, 165, 32, 0.3);
+            border: 4px solid #ffd700;
+            overflow: hidden;
+            background-color: #ffd700;
+            box-shadow: 0 4px 12px rgba(218, 165, 32, 0.4);
+        }
+
+        .founder-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .founder-card h4 {
@@ -201,11 +204,14 @@
             <p class="nepali-text"><em>(हाम्रो मुख्य उद्देश्य प्रत्येक व्यक्तिलाई आन्तरिक शान्ति, सत्य र स्व-जागरण तर्फ डोर्‍याउनु हो। बाटो वा दृष्टिकोण फरक हुन सक्छन्, तर लक्ष्य एउटै हो—परम सत्य र सकारात्मकता।)</em></p>
         </div>
 
-        <!-- 3. Founders Section (Clean Text-Only Layout) -->
+        <!-- 3. Founders Section -->
         <div class="founders-section">
             <div class="founders-grid">
                 <div class="founder-card">
-                    <div class="founder-icon">S</div>
+                    <!-- फोटो यहाँ राखिएको छ -->
+                    <div class="founder-avatar">
+                        <img src="profile.jpg" alt="Sanjay Giri">
+                    </div>
                     <h4>Sanjay Giri</h4>
                     <span>Founder & Content Creator</span>
                     <p>Founder and primary content creator behind Awake Spirit.</p>
