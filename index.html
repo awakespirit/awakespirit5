@@ -1,236 +1,207 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awake Spirit | Connect with Sanjay Giri</title>
+    <title>Awake Spirit | Sanjay Giri</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
         body {
-            background: linear-gradient(rgba(255, 252, 240, 0.7), rgba(255, 252, 240, 0.7)),
-                        url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background: linear-gradient(135deg, #0f172a, #1e1b4b);
+            color: #f8fafc;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            padding: 20px 0;
-        }
-
-        .hero-container { text-align: center; padding: 20px; width: 100%; max-width: 500px; }
-
-        /* Golden Box */
-        .awake-box {
-            background: linear-gradient(135deg, #ffd700, #daa520);
-            color: white;
-            padding: 30px 20px;
-            font-size: 30px;
-            font-weight: 800;
-            border-radius: 25px;
-            cursor: pointer;
-            box-shadow: 0 15px 35px rgba(218, 165, 32, 0.4);
-            border: 4px solid #fff;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-            display: inline-block;
-            width: 100%;
-        }
-
-        .awake-box:hover { transform: scale(1.05); }
-
-        /* Social Media Buttons */
-        .social-container {
-            display: none;
-            margin-top: 30px;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            animation: slideUp 0.5s ease-out forwards;
-        }
-
-        .social-btn {
-            padding: 15px;
-            border-radius: 15px;
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .youtube { background: #FF0000; }
-        .tiktok { background: #000000; }
-        .facebook { background: #1877F2; }
-        .instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
-
-        @keyframes slideUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* About Section Design */
-        .about-section {
             padding: 40px 20px;
+        }
+
+        .container {
             width: 100%;
-            max-width: 850px;
-            margin-top: 20px;
-        }
-
-        .about-content, .mission-box {
-            background: rgba(255, 255, 255, 0.92);
-            padding: 25px 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            margin-bottom: 25px;
-        }
-
-        .about-content h3, .mission-box h3, .founders-section h3 {
-            color: #2c3e50;
-            margin-bottom: 12px;
-            font-size: 22px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 8px;
-        }
-
-        .nepali-text {
-            color: #555;
-            font-size: 0.95rem;
-            margin-top: 8px;
-            line-height: 1.5;
-        }
-
-        .mission-box {
-            border-left: 5px solid #8e44ad;
-        }
-
-        .mission-box .subtitle {
-            color: #8e44ad;
-            font-weight: bold;
-            margin-bottom: 10px;
-            font-size: 16px;
-        }
-
-        .founders-section {
-            margin-top: 30px;
-        }
-
-        .founders-grid {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .founder-card {
-            background: rgba(255, 255, 255, 0.92);
-            padding: 30px 25px;
-            border-radius: 12px;
+            max-width: 600px;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            width: 320px;
-            border: 2px solid #ffd700;
         }
 
-        /* गोल्डेन घेराभित्र फोटो राख्ने डिजाइन */
-        .founder-avatar {
-            width: 110px;
-            height: 110px;
+        /* Profile Section */
+        .profile-img-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
             border-radius: 50%;
-            margin: 0 auto 15px auto;
-            border: 4px solid #ffd700;
             overflow: hidden;
-            background-color: #ffd700;
-            box-shadow: 0 4px 12px rgba(218, 165, 32, 0.4);
+            border: 3px solid #38bdf8;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
         }
 
-        .founder-avatar img {
+        .profile-img-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block;
         }
 
-        .founder-card h4 {
-            margin: 5px 0;
-            font-size: 22px;
-            color: #2c3e50;
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            color: #ffffff;
         }
 
-        .founder-card span {
+        .tagline {
             font-size: 14px;
-            color: #8e44ad;
-            font-weight: bold;
-            display: block;
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        /* Social & Action Links */
+        .links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: rgba(30, 41, 59, 0.7);
+            color: #ffffff;
+            padding: 14px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 20, 0.1);
+        }
+
+        .btn:hover {
+            background: #38bdf8;
+            color: #0f172a;
+            transform: translateY(-2px);
+            border-color: #38bdf8;
+            box-shadow: 0 6px 15px rgba(56, 189, 248, 0.3);
+        }
+
+        .btn.primary {
+            background: linear-gradient(135deg, #38bdf8, #0284c7);
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .btn.primary:hover {
+            background: linear-gradient(135deg, #0284c7, #0369a1);
+            color: #ffffff;
+        }
+
+        .btn i {
+            font-size: 18px;
+        }
+
+        /* About Section */
+        .card {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .card h3 {
+            font-size: 18px;
+            color: #38bdf8;
             margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #cbd5e1;
+            margin-bottom: 12px;
+        }
+
+        .card p.nepali {
+            font-style: italic;
+            color: #94a3b8;
+            border-left: 2px solid #38bdf8;
+            padding-left: 10px;
+        }
+
+        /* Footer */
+        footer {
+            font-size: 12px;
+            color: #64748b;
+            margin-top: 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-    <!-- Hero / Social Section -->
-    <div class="hero-container">
-        <div class="awake-box" onclick="toggleSocial()">
-            AWAKE SPIRIT
+    <div class="container">
+        <!-- Profile Image -->
+        <div class="profile-img-container">
+            <img src="profile.jpg" alt="Sanjay Giri">
         </div>
 
-        <p style="margin-top: 15px; color: #555; font-weight: 600;">Tap to connect</p>
+        <h1>AWAKE SPIRIT</h1>
+        <p class="tagline">One Truth, Many Paths — एउटै सत्य, अनेक मार्ग</p>
 
-        <div class="social-container" id="socialBox">
-            <a href="https://youtube.com/@awakeSpirits5" class="social-btn youtube" target="_blank">YouTube</a>
-            <a href="https://tiktok.com/@awakespirit1" class="social-btn tiktok" target="_blank">TikTok</a>
-            <a href="https://facebook.com/sunjoygirri" class="social-btn facebook" target="_blank">Facebook</a>
-            <a href="https://instagram.com/yourusername" class="social-btn instagram" target="_blank">Instagram</a>
+        <!-- Main Links -->
+        <div class="links-list">
+            <a href="https://youtube.com/@awakeSpirits5" target="_blank" class="btn primary">
+                <i class="fa-solid fa-podcast"></i> Listen to Tatwa Darshi / Podcast
+            </a>
+            <a href="https://youtube.com/@awakeSpirits5" target="_blank" class="btn">
+                <i class="fa-brands fa-youtube"></i> YouTube Channel
+            </a>
+            <a href="https://tiktok.com/@awakespirit1" target="_blank" class="btn">
+                <i class="fa-brands fa-tiktok"></i> TikTok Community
+            </a>
+            <a href="https://facebook.com/sunjoygirri" target="_blank" class="btn">
+                <p></p><i class="fa-brands fa-facebook"></i> Facebook Profile
+            </a>
+            <a href="https://instagram.com/yourusername" target="_blank" class="btn">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </a>
         </div>
+
+        <!-- About Me Section -->
+        <div class="card">
+            <h3><i class="fa-solid fa-user-shield"></i> About Me</h3>
+            <p><strong>Welcome! I am Sanjay Giri.</strong> Dedicated to inspiring and empowering individuals through motivational insights, philosophical reflections, and positive thinking. Through 'Awake Spirit', my aim is to simplify life's profound wisdom.</p>
+            <p class="nepali">नमस्कार! म सञ्जय गिरी। प्रेरणादायी र दार्शनिक विचारहरू प्रस्तुत गर्दै मानिसहरूलाई आन्तरिक रूपमा सशक्त बनाउने उद्देश्यका साथ म यो क्षेत्रमा सक्रिय छु।</p>
+        </div>
+
+        <!-- Mission Section -->
+        <div class="card">
+            <h3><i class="fa-solid fa-compass"></i> Our Mission</h3>
+            <p>Our core purpose is to guide every individual toward inner peace, truth, and self-realization. Perspectives may differ, but the ultimate destination remains one—truth and positivity.</p>
+            <p class="nepali">हाम्रो मुख्य उद्देश्य प्रत्येक व्यक्तिलाई आन्तरिक शान्ति, सत्य र स्व-जागरण तर्फ डोर्‍याउनु हो।</p>
+        </div>
+
+        <footer>
+            &copy; 2026 Awake Spirit. All Rights Reserved.
+        </footer>
     </div>
-
-    <!-- About Section -->
-    <section class="about-section" id="about">
-        <!-- 1. About Me -->
-        <div class="about-content">
-            <h3>About Me</h3>
-            <p><strong>Welcome! I am Sanjay Giri.</strong> I am dedicated to inspiring and empowering individuals through motivational insights, philosophical reflections, and positive thinking. Through 'Awake Spirit', my aim is to simplify life's profound wisdom and help people connect with their inner strength.</p>
-            
-            <p class="nepali-text"><em>(नमस्कार! म सञ्जय गिरी। प्रेरणादायी र दार्शनिक विचारहरू प्रस्तुत गर्दै मानिसहरूलाई आन्तरिक रूपमा सशक्त बनाउने उद्देश्यका साथ म यो क्षेत्रमा सक्रिय छु। 'Awake Spirit' मार्फत जीवनका विविध आयाम र सकारात्मक सोचलाई सहज रूपमा प्रस्तुत गर्ने मेरो प्रयास रहेको छ।)</em></p>
-        </div>
-
-        <!-- 2. My Mission -->
-        <div class="mission-box">
-            <h3>Our Mission: One Truth, Many Paths</h3>
-            <p class="subtitle">"One Truth, Many Paths" — <em>एउटै सत्य, अनेक मार्ग</em></p>
-            <p>Our core purpose is to guide every individual toward inner peace, truth, and self-realization. While perspectives and paths may differ, the ultimate destination remains one—truth and positivity. 'Awake Spirit' strives to encourage everyone to discover truth along their own unique path.</p>
-            
-            <p class="nepali-text"><em>(हाम्रो मुख्य उद्देश्य प्रत्येक व्यक्तिलाई आन्तरिक शान्ति, सत्य र स्व-जागरण तर्फ डोर्‍याउनु हो। बाटो वा दृष्टिकोण फरक हुन सक्छन्, तर लक्ष्य एउटै हो—परम सत्य र सकारात्मकता।)</em></p>
-        </div>
-
-        <!-- 3. Founders Section -->
-        <div class="founders-section">
-            <div class="founders-grid">
-                <div class="founder-card">
-                    <!-- फोटो यहाँ राखिएको छ -->
-                    <div class="founder-avatar">
-                        <img src="profile.jpg" alt="Sanjay Giri">
-                    </div>
-                    <h4>Sanjay Giri</h4>
-                    <span>Founder & Content Creator</span>
-                    <p>Founder and primary content creator behind Awake Spirit.</p>
-                    <p class="nepali-text"><em>(Awake Spirit का संस्थापक तथा मुख्य विषयवस्तु निर्माता।)</em></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-        function toggleSocial() {
-            var x = document.getElementById("socialBox");
-            if (x.style.display === "grid") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "grid";
-            }
-        }
-    </script>
 
 </body>
 </html>
